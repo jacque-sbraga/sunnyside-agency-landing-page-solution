@@ -1,0 +1,121 @@
+.header {
+  padding: 45px 24px;
+  background: url("../images/desktop/image-header.jpg") no-repeat center/cover;
+  height: 798px;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-menu {
+  display: flex;
+  gap: 10px;
+}
+.header-menu li:last-child a {
+  background: #fff;
+  text-transform: uppercase;
+  font-family: "Fraunces", serif;
+  color: hsl(212, 27%, 19%);
+}
+.menu-link {
+  font-size: 0.937rem;
+  color: #fff;
+  padding: 20px 30px;
+  display: block;
+  border-radius: 40px;
+}
+
+.menu-link:hover,
+.header-menu li:last-child a:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+.intro {
+  text-align: center;
+}
+
+.header-intro {
+  text-align: center;
+}
+
+.header-intro img {
+  cursor: pointer;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 10px;
+  font-weight: 900;
+  margin: 100px 0;
+}
+
+.menu-hamburger {
+  display: none;
+}
+
+ul.menu-mobile {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  flex-direction: column;
+  align-items: center;
+  padding: 48px 0;
+  display: flex;
+}
+
+ul.menu-mobile::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -39px;
+  right: 0;
+  border: 20px solid;
+  border-color: #3dbeff #fff #fff #3dbeff;
+}
+
+@media (max-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+  .header-menu li:last-child a {
+    background: #fad400;
+  }
+  .menu-hamburger {
+    display: initial;
+  }
+  .menu-link:link {
+    color: #5a636c;
+  }
+  .header-title {
+    margin: 120px 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .header-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .header {
+    padding: 45px 24px;
+    background: url("../images/mobile/image-header.jpg") no-repeat center/cover;
+    height: 540px;
+  }
+  .header-title {
+    margin: 70px 0;
+  }
+}
